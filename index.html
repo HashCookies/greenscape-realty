@@ -1,0 +1,41 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: default
+images:
+  - image_path: /images/property1.jpeg
+  - title: "Property 1"
+  - image_path: /images/property2.jpeg
+  - title: "Property 2"
+  - image_path: /images/property3.jpeg
+  - title: "Property 3"
+  - image_path: /images/property4.jpeg
+  - title: "Property 4"
+---
+
+<div class="cover-section section">
+  <h1 id="logo">Greenscape Realty</h1>
+  <div id="cover-overlay"></div>
+</div>
+
+<div class="intro-section section">
+  <div class="container">
+    <h3 class="section-title">About Greenscape Realty</h3>
+    <p>
+      Greenscape Realty is the brainchild of Shane Dias, Shawn Gomes and Shannon Gomes. The partners in this construction company are all highly experienced in the fields of construction and Air Conditioning. Since its inception, the company’s sole motive has been to develop high-end villas while paying attention to detail. The company excels at producing state of the art luxury villas for its clients. We are now looking to venture into the market of apartment construction with the same attention to detail that is applied in the villa constructions.
+    </p>
+  </div>
+</div>
+
+<div class="projects-section section">
+  <h3 class="section-title">Projects</h3>
+
+  {% for image in page.images %}
+    <li><img src="{{ image.image_path }}" alt="{{ image.title}}"/></li>
+  {% endfor %}
+</div>
+
+<div class="contact-section section">
+  <h3 class="section-title">Contact Us</h3>
+</div>

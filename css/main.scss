@@ -1,0 +1,81 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import 'normalize';
+@import 'skeleton';
+
+$lightYellow: #FEFCEF;
+$dark: #4A4A4A;
+
+body {
+  font-family: "Open Sans";
+  background: $lightYellow;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.cover-section {
+  height: 500px;
+  background: url('/images/property8.jpeg') center no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#logo {
+  z-index: 20;
+  margin: 0 auto;
+  position: relative;
+  background: $lightYellow url('/images/logo-greenscape-realty.png') center no-repeat;
+  width: 516px;
+  height: 125px;
+  padding: 50px 100px;
+  text-indent: -9999px;
+  outline: 20px solid transparentize(#EDE9D2, 0.2);
+}
+
+#cover-overlay {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparentize(#F8A41C, 0.8);
+}
+
+.section-title {
+  /* ABOUT GREENSCAPE REA: */
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #4A4A4A;
+  letter-spacing: 7px;
+  text-align: center;
+  &:after {
+    content: " ";
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 1px;
+    background: $dark;
+  }
+}
+
+.intro-section {
+  .container {
+    max-width: 540px;
+  }
+  p {
+    text-align: justify;
+    line-height: 30px;
+    font-size: 14px;
+  }
+}

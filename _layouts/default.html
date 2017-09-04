@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="{{page.tags}}">
+
+    {% include header.html %}
+
+    <div class="page-content" id="skrollr-body">
+      <div id="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+	{% include scripts.html %}
+
+  <!-- Google analytics  -->
+  {% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+  </body>
+
+</html>
