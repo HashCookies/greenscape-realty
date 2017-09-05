@@ -6,10 +6,11 @@ var winW = $(window).width();
 $(document).ready(function() {
   $('.flexslider').flexslider({
     animation: "slide",
-    animationLoop: true,
+    animationLoop: false,
     itemWidth: 500,
     itemMargin: 5,
     maxItems: 1,
+    initDelay: Math.floor(Math.random() * 2000) + 1000
   });
 
   var propertiesCount = $('.property-item').length;

@@ -26,13 +26,21 @@ body {
 }
 
 .cover-section {
-  height: 500px;
   background: url('/images/property8.jpeg') center no-repeat;
   background-size: cover;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  .btn-group {
+    text-align: center;
+    position: relative;
+    z-index: 200;
+    margin: 0 auto;
+    overflow: auto;
+    .button-default {
+      margin-right: 15px;
+      background: transparentize($lightYellow, 0.7);
+      color: $dark;
+    }
+  }
 }
 
 #logo {
@@ -43,6 +51,7 @@ body {
   width: 516px;
   height: 125px;
   padding: 30px 50px 30px 20px;
+  margin: 100px auto 100px;
   text-indent: -9999px;
   outline: 20px solid transparentize(#EDE9D2, 0.2);
 }
