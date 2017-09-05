@@ -1,17 +1,16 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
-images:
-  - image_path: /images/property1.jpeg
-  - title: "Property 1"
-  - image_path: /images/property2.jpeg
-  - title: "Property 2"
-  - image_path: /images/property3.jpeg
-  - title: "Property 3"
-  - image_path: /images/property4.jpeg
-  - title: "Property 4"
+properties:
+  - title: "Villa Casa, Assagao"
+    description: Gorgeous 4-bedroom, 2-bathroom home in beautiful Silver Lake. This property offers 1,160 square feet of living space and a lot size of 5,499 square feet. Your family and loved ones will enjoy the spacious backyard, perfect for family gatherings! Come and take a look at this beauty…
+    images:
+      - title: /images/property1.jpeg
+      - title: /images/property2.jpeg
+  - title: "Villa Menezes, Anjuna"
+    description: This 1,523 square foot single-family home has 3 bedrooms and 3.0 bathrooms. It is located at 3991 Bleacher Ave, Burbank, California.
+    images:
+      - title: /images/property3.jpeg
+      - title: /images/property4.jpeg
 ---
 
 <div class="cover-section section">
@@ -30,12 +29,61 @@ images:
 
 <div class="projects-section section">
   <h3 class="section-title">Projects</h3>
-
-  {% for image in page.images %}
-    <li><img src="{{ image.image_path }}" alt="{{ image.title}}"/></li>
-  {% endfor %}
+  <div class="properties-wrap">
+    {% for property in page.properties %}
+      <li class="property-item">
+        <div class="flexslider">
+          <ul class="slides">
+          {% for image in property.images %}
+            <li>
+              <img src="{{image.title}}" />
+            </li>
+          {% endfor %}
+          </ul>
+        </div>
+        <h1 class="title">{{property.title}}</h1>
+        <p class="description">
+          {{property.description}}
+        </p>
+      </li>
+    {% endfor %}
+  </div>
 </div>
 
 <div class="contact-section section">
   <h3 class="section-title">Contact Us</h3>
+  <div class="container">
+    <div class="row">
+      <div class="eight columns">
+        <form action="">
+          <div class="form-group">
+            <label>Name</label>
+            <input placeholder="Full name" class="form-control u-full-width" />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input placeholder="your@email.com (optional)" class="form-control u-full-width" />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input placeholder="Phone (optional)" class="form-control u-full-width" />
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Message" class="form-control u-full-width" rows="6"></textarea>
+          </div>
+          <input class="button-primary" type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="four columns">
+        <h4 class="small-title">Greenscape Realty</h4>
+        <address>
+          S-8, Gera Complex,<br />
+          Pato Plaza, Panaji<br />
+          403110 - Goa
+        </address>
+        Phone: +91 9902 229911
+      </div>
+    </div>
+  </div>
 </div>
