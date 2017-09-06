@@ -78,6 +78,10 @@ body {
   letter-spacing: 7px;
   text-align: center;
   font-family: $altSans;
+  a {
+    text-decoration: none;
+    color: $dark;
+  }
   &:after {
     content: " ";
     display: block;
@@ -130,6 +134,10 @@ body {
     margin-bottom: 5px;
     font-family: $altSans;
     font-weight: bold;
+    a {
+      color: $dark;
+      text-decoration: none;
+    }
   }
   .flexslider {
   }
@@ -224,6 +232,13 @@ address {
 }
 
 .projects-page {
+  .project-item {
+    margin: 0 auto 25px;
+    display: block;
+    img {
+      margin-bottom: 25px;
+    }
+  }
   .description {
     max-width: 550px;
     margin: 0 auto 50px;
@@ -232,7 +247,7 @@ address {
   ul {
     padding-left: 0;
   }
-  .image-item {
+  li {
     list-style: none;
   }
   img {

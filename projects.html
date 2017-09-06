@@ -7,15 +7,16 @@ layout: default
   <div class="container projects-page">
     {% for project in site.projects %}
       <li class="project-item">
+        <a href="/{{project.path | replace_first: '_', '' | prepend: site.baseurl}}">
         {% for image in project.images limit:1 %}
-          <li>
             <img src="{{image.url | prepend: site.baseurl}}" />
-          </li>
         {% endfor %}
+        </a>
         <h1 class="title"><a href="/{{project.path | replace_first: '_', ''| prepend: site.baseurl}}">{{project.title}}</a></h1>
-        <p class="description">
+        <p>
           {{project.description}}
         </p>
+        <a href="/{{project.path | replace_first: '_', '' | prepend: site.baseurl}}" class="button button-default">View all images ({{project.images.size}})</a>
       </li>
     {% endfor %}
   </div>
