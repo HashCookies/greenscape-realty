@@ -14,6 +14,9 @@ layout: default
           </li>
         {% endfor %}
       </ul>
-      <a href="{{ "projects" | prepend: site.baseurl }}" class="button button-primary">See all projects</a>
+      <div class="center">
+        <a href="{{ "projects" | prepend: site.baseurl }}" class="button button-primary">See all projects</a>
+      </div>
   </div>
+  {% include contact.html %}
 </div>
