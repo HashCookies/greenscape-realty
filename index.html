@@ -41,13 +41,13 @@ properties:
 
   <div class="properties-wrap">
     <ul class="inner">
-      {% for property in page.properties %}
+      {% for property in site.properties %}
         <li class="property-item">
           <div class="flexslider">
             <ul class="slides">
             {% for image in property.images %}
               <li>
-                <img src="{{image.title}}" />
+                <img src="{{image.url}}" />
               </li>
             {% endfor %}
             </ul>
