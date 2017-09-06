@@ -27,7 +27,7 @@ layout: default
             {% endfor %}
             </ul>
           </div>
-          <h1 class="title"><a href="/{{project.path | replace_first: '_', '' | prepend: site.baseurl}}">{{project.title}}</a></h1>
+          <h1 class="title"><a href="{{project.path | replace_first: '_', '' | prepend: site.baseurl}}">{{project.title}}</a></h1>
           <p class="description">
             {{project.description}}
           </p>
