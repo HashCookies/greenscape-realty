@@ -11,6 +11,11 @@ properties:
     images:
       - title: /images/property3.jpeg
       - title: /images/property4.jpeg
+  - title: "Passion Escape, Anjuna"
+    description: This 1,523 square foot single-family home has 3 bedrooms and 3.0 bathrooms. It is located at 3991 Bleacher Ave, Burbank, California.
+    images:
+      - title: /images/property5.jpeg
+      - title: /images/property6.jpeg
 ---
 
 <div class="cover-section section">
@@ -33,24 +38,27 @@ properties:
 
 <div class="projects-section section">
   <h3 class="section-title">Projects</h3>
+
   <div class="properties-wrap">
-    {% for property in page.properties %}
-      <li class="property-item">
-        <div class="flexslider">
-          <ul class="slides">
-          {% for image in property.images %}
-            <li>
-              <img src="{{image.title}}" />
-            </li>
-          {% endfor %}
-          </ul>
-        </div>
-        <h1 class="title">{{property.title}}</h1>
-        <p class="description">
-          {{property.description}}
-        </p>
-      </li>
-    {% endfor %}
+    <ul class="inner">
+      {% for property in page.properties %}
+        <li class="property-item">
+          <div class="flexslider">
+            <ul class="slides">
+            {% for image in property.images %}
+              <li>
+                <img src="{{image.title}}" />
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
+          <h1 class="title">{{property.title}}</h1>
+          <p class="description">
+            {{property.description}}
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 
@@ -76,7 +84,7 @@ properties:
             <label>Message</label>
             <textarea placeholder="Message" class="form-control u-full-width" rows="6"></textarea>
           </div>
-          <input class="button-primary" type="submit" value="Submit">
+          <input class="button-primary" type="submit" value="Send Message">
         </form>
       </div>
       <div class="four columns">
@@ -90,4 +98,8 @@ properties:
       </div>
     </div>
   </div>
+</div>
+
+<div class="section footer-section">
+  <p><strong>Greenscape Realty</strong> is the operated by <strong>Shane Dias</strong>, <strong>Shawn Gomes</strong> and <strong>Shannon Gomes</strong>.</p>
 </div>

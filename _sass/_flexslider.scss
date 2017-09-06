@@ -192,14 +192,14 @@ html[xmlns] .flexslider .slides {
   content: '\f003';
 }
 .flex-control-nav {
-
+  z-index: 200;
   position: absolute;
   bottom: 10px;
   text-align: center;
   right: 15px;
 }
 .flex-control-nav li {
-  margin: 0 6px;
+  margin: 0 4px;
   display: inline-block;
   zoom: 1;
   *display: inline;

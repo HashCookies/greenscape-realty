@@ -4,18 +4,27 @@ var winH = $(window).height();
 var winW = $(window).width();
 
 $(document).ready(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-    animationLoop: false,
-    itemWidth: 500,
-    itemMargin: 5,
-    maxItems: 1,
-    initDelay: Math.floor(Math.random() * 2000) + 1000
+  $('.flexslider').each(function() {
+    $(this).flexslider({
+      animation: "fade",
+      animationLoop: false,
+      itemWidth: 500,
+      itemMargin: 5,
+      maxItems: 1,
+      initDelay: Math.floor(Math.random() * 2000) + 1000
+    });
+  });
+
+  $('.property-item').on('click', function() {
+    var offset = (winW - $(this).width()) / 2;
+    $('.properties-wrap').scrollTo($(this), 500, {
+      offset: -offset
+    });
   });
 
   var propertiesCount = $('.property-item').length;
 
-  $('.properties-wrap').width(propertiesCount * 800).css({
-    marginLeft: (winW - 800) / 2
+  $('.properties-wrap .inner').width(propertiesCount * 2000).css({
+
   })
 });
