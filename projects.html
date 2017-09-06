@@ -16,7 +16,7 @@ layout: default
         <p>
           {{project.description}}
         </p>
-        <a href="{{project.path | replace_first: '_', '' | prepend: site.baseurl}} | prepend: site.url" class="button button-default">View all images ({{project.images.size}})</a>
+        <a href="{{project.path | replace_first: '_', '' | prepend: site.baseurl | prepend: site.url}}" class="button button-default">View all images ({{project.images.size}})</a>
       </li>
     {% endfor %}
   </div>
