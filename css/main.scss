@@ -6,7 +6,8 @@
 $lightYellow: #FEFCEF;
 $medYellow: #EFE8BC;
 $dark: #53524B;
-$altSans: "Futura";
+$font: "Open Sans", "Helvetica Neue", sans-serif;
+$altSans: $font;
 $vib: #F6A623;
 
 @import 'normalize';
@@ -16,7 +17,7 @@ $vib: #F6A623;
 
 
 body {
-  font-family: "Open Sans";
+  font-family: $font;
   background: $lightYellow;
   color: $dark;
 }
@@ -27,7 +28,7 @@ body {
 }
 
 .cover-section {
-  background: url('/images/property8.jpeg') center no-repeat;
+  background: url('../images/property8.jpeg') center no-repeat;
   background-size: cover;
   position: relative;
   .btn-group {
@@ -49,7 +50,7 @@ body {
   z-index: 20;
   margin: 0 auto;
   position: relative;
-  background: $lightYellow url('/images/logo-greenscape-realty.png') center no-repeat;
+  background: $lightYellow url('../images/logo-greenscape-realty.png') center no-repeat;
   width: 516px;
   height: 125px;
   padding: 30px 50px 30px 20px;
@@ -76,6 +77,7 @@ body {
   color: #4A4A4A;
   letter-spacing: 7px;
   text-align: center;
+  font-family: $altSans;
   &:after {
     content: " ";
     display: block;
@@ -88,7 +90,7 @@ body {
 
 .intro-section {
   padding-top: 150px;
-  background: url('/images/gs-bg.svg') center bottom no-repeat;
+  background: url('../images/gs-bg.svg') center bottom no-repeat;
   padding-bottom: 350px;
   .container {
     max-width: 540px;
@@ -127,6 +129,7 @@ body {
     font-size: 14px;
     margin-bottom: 5px;
     font-family: $altSans;
+    font-weight: bold;
   }
   .flexslider {
   }
