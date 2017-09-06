@@ -12,8 +12,8 @@
         <div class="cover-section section">
           <h1 id="logo">Greenscape Realty</h1>
           <div class="btn-group">
-            <a href="{{site.url | site.baseurl}}#intro-section" class="button button-default" id="learn-more" onclick="$(this).scrollToId('#intro-section', 800, 30); return false">Learn More</a>
-            <a href="{{site.url | site.baseurl}}#contact-section" class="button button-default" id="contact" onclick="$(this).scrollToId('#contact-section', 800, 30); return false">Request Callback</a>
+            <a href="{{"/#intro-section" | prepend: site.baseurl}}" class="button button-default" id="learn-more" onclick="$(this).scrollToId('#intro-section', 800, 30); return false">Learn More</a>
+            <a href="{{"/#contact-section" | prepend: site.baseurl}}" class="button button-default" id="contact" onclick="$(this).scrollToId('#contact-section', 800, 30); return false">Request Callback</a>
           </div>
           <div id="cover-overlay"></div>
         </div>
