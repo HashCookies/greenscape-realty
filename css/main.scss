@@ -105,10 +105,10 @@ body {
   padding-top: 0;
   margin-top: -200px;
 }
+
 .properties-wrap {
   width: 100%;
-  overflow-x: scroll;
-  overflow-y: auto;
+  overflow-x: hidden;
   .inner {
     padding: 0 500px;
   }
@@ -117,8 +117,9 @@ body {
 .property-item {
   width: 660px;
   margin-right: 50px;
-  float: left;
+  display: inline-block;
   list-style: none;
+  vertical-align: top;
   img {
     max-height: 440px;
   }

@@ -24,7 +24,8 @@ $(document).ready(function() {
 
   var propertiesCount = $('.property-item').length;
 
-  $('.properties-wrap .inner').width(propertiesCount * 2000).css({
-
+  $('.properties-wrap .inner').width(propertiesCount * 800).css({
+    paddingLeft: (winW - 800) / 2,
+    paddingRight: (winW - 800) / 2
   })
 });
