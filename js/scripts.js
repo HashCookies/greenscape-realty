@@ -27,5 +27,23 @@ $(document).ready(function() {
   $('.properties-wrap .inner').width(propertiesCount * 800).css({
     paddingLeft: (winW - 800) / 2,
     paddingRight: (winW - 800) / 2
-  })
+  });
+
+  $.fn.scrollToId = function(element, speed=400, offset=0) {
+
+    if (winW < 480) { //Check if mobile
+      offset = -10;
+    }
+
+    if (!$(element).length) {
+      document.location.href = '/';
+    }
+
+    $.scrollTo(element, speed, {
+      offset: {
+        top: offset
+      }
+    });
+    return false;
+  }
 });

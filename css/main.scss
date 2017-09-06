@@ -88,7 +88,7 @@ body {
   }
 }
 
-.intro-section {
+#intro-section {
   padding-top: 150px;
   background: url('../images/gs-bg.svg') center bottom no-repeat;
   padding-bottom: 350px;
@@ -141,7 +141,7 @@ body {
   }
 }
 
-.contact-section {
+#contact-section {
   background: lighten($lightYellow, 2%);
   padding-top: 100px;
   .container {

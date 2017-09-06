@@ -21,13 +21,13 @@ properties:
 <div class="cover-section section">
   <h1 id="logo">Greenscape Realty</h1>
   <div class="btn-group">
-    <button class="button-default" id="learn-more">Learn More</button>
-    <button class="button-default" id="contact">Request Callback</button>
+    <a href="#intro-section" class="button button-default" id="learn-more" onclick="$(this).scrollToId('#intro-section', 800, 30); return false">Learn More</a>
+    <a href="#contact-section" class="button button-default" id="contact" onclick="$(this).scrollToId('#contact-section', 800, 30); return false">Request Callback</a>
   </div>
   <div id="cover-overlay"></div>
 </div>
 
-<div class="intro-section section">
+<div class="section" id="intro-section">
   <div class="container">
     <h3 class="section-title">About Greenscape Realty</h3>
     <p>
@@ -62,7 +62,7 @@ properties:
   </div>
 </div>
 
-<div class="contact-section section">
+<div class="section" id="contact-section">
   <h3 class="section-title">Contact Us</h3>
   <div class="container">
     <div class="row">
