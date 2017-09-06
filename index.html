@@ -1,31 +1,6 @@
 ---
 layout: default
-properties:
-  - title: "Villa Casa, Assagao"
-    description: Gorgeous 4-bedroom, 2-bathroom home in beautiful Silver Lake. This property offers 1,160 square feet of living space and a lot size of 5,499 square feet. Your family and loved ones will enjoy the spacious backyard, perfect for family gatherings! Come and take a look at this beauty…
-    images:
-      - title: images/property1.jpeg
-      - title: images/property2.jpeg
-  - title: "Villa Menezes, Anjuna"
-    description: This 1,523 square foot single-family home has 3 bedrooms and 3.0 bathrooms. It is located at 3991 Bleacher Ave, Burbank, California.
-    images:
-      - title: images/property3.jpeg
-      - title: images/property4.jpeg
-  - title: "Passion Escape, Anjuna"
-    description: This 1,523 square foot single-family home has 3 bedrooms and 3.0 bathrooms. It is located at 3991 Bleacher Ave, Burbank, California.
-    images:
-      - title: images/property5.jpeg
-      - title: images/property6.jpeg
 ---
-
-<div class="cover-section section">
-  <h1 id="logo">Greenscape Realty</h1>
-  <div class="btn-group">
-    <a href="#intro-section" class="button button-default" id="learn-more" onclick="$(this).scrollToId('#intro-section', 800, 30); return false">Learn More</a>
-    <a href="#contact-section" class="button button-default" id="contact" onclick="$(this).scrollToId('#contact-section', 800, 30); return false">Request Callback</a>
-  </div>
-  <div id="cover-overlay"></div>
-</div>
 
 <div class="section" id="intro-section">
   <div class="container">
@@ -39,23 +14,24 @@ properties:
 <div class="projects-section section">
   <h3 class="section-title">Projects</h3>
 
-  <div class="properties-wrap">
+  <div class="projects-wrap">
     <ul class="inner">
-      {% for property in site.properties %}
-        <li class="property-item">
+      {% for project in site.projects %}
+        <li class="project-item">
           <div class="flexslider">
             <ul class="slides">
-            {% for image in property.images %}
+            {% for image in project.images limit:3 %}
               <li>
-                <img src="{{image.url}}" />
+                <img src="{{image.url | prepend: site.baseurl}}" />
               </li>
             {% endfor %}
             </ul>
           </div>
-          <h1 class="title">{{property.title}}</h1>
+          <h1 class="title"><a href="/{{project.path | replace_first: '_', '' | prepend: site.baseurl}}">{{project.title}}</a></h1>
           <p class="description">
-            {{property.description}}
+            {{project.description}}
           </p>
+          <a href="/{{project.path | replace_first: '_', '' | prepend: site.baseurl}}" class="button button-default">View all images ({{project.images.size}})</a>
         </li>
       {% endfor %}
     </ul>

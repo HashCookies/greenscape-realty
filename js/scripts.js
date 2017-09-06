@@ -15,16 +15,16 @@ $(document).ready(function() {
     });
   });
 
-  $('.property-item').on('click', function() {
+  $('.project-item').on('click', function() {
     var offset = (winW - $(this).width()) / 2;
-    $('.properties-wrap').scrollTo($(this), 500, {
+    $('.projects-wrap').scrollTo($(this), 500, {
       offset: -offset
     });
   });
 
-  var propertiesCount = $('.property-item').length;
+  var propertiesCount = $('.project-item').length;
 
-  $('.properties-wrap .inner').width(propertiesCount * 800).css({
+  $('.projects-wrap .inner').width(propertiesCount * 800).css({
     paddingLeft: (winW - 800) / 2,
     paddingRight: (winW - 800) / 2
   });

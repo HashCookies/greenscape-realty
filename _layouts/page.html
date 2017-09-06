@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="section">
+  <div class="container projects-page">
+      <h3 class="section-title">{{page.title}}</h3>
+      <div class="description">
+        {{page.description}}
+      </div>
+      <ul class="images">
+        {% for image in page.images %}
+          <li class="image-item">
+            <img src="{{image.url | prepend: site.baseurl}}" />
+          </li>
+        {% endfor %}
+      </ul>
+      <a href="/projects" class="button button-primary">See all projects</a>
+  </div>
+</div>

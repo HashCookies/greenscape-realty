@@ -108,7 +108,7 @@ body {
   margin-top: -200px;
 }
 
-.properties-wrap {
+.projects-wrap {
   width: 100%;
   overflow-x: hidden;
   .inner {
@@ -116,7 +116,7 @@ body {
   }
 }
 
-.property-item {
+.project-item {
   width: 660px;
   margin-right: 50px;
   display: inline-block;
@@ -220,5 +220,22 @@ address {
   }
   strong {
     color: $vib;
+  }
+}
+
+.projects-page {
+  .description {
+    max-width: 550px;
+    margin: 0 auto 50px;
+    text-align: justify;
+  }
+  ul {
+    padding-left: 0;
+  }
+  .image-item {
+    list-style: none;
+  }
+  img {
+    max-width: 100%;
   }
 }
