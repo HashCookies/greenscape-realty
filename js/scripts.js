@@ -15,19 +15,36 @@ $(document).ready(function() {
     });
   });
 
-  $('.project-item').on('click', function() {
-    var offset = (winW - $(this).width()) / 2;
-    $('.projects-wrap').scrollTo($(this), 500, {
-      offset: -offset
+
+
+  // var projectItemWidth = 0;
+  //
+  // if ((winW * 0.9) > 660) {
+  //   projectItemWidth = 660;
+  // } else {
+  //   projectItemWidth = winW - 40;
+  // }
+  //
+  // $('.project-item').width(projectItemWidth);
+
+
+  var projectItemWidth = 800;
+
+  if (winW > 768) {
+    var propertiesCount = $('.project-item').length;
+    $('.projects-wrap .inner').width(propertiesCount * projectItemWidth).css({
+      paddingLeft: (winW - projectItemWidth) / 2,
+      paddingRight: (winW - projectItemWidth) / 2
     });
-  });
 
-  var propertiesCount = $('.project-item').length;
+    $('.project-item').on('click', function() {
+      var offset = (winW - $(this).width()) / 2;
+      $('.projects-wrap').scrollTo($(this), 500, {
+        offset: -offset
+      });
+    });
+  }
 
-  $('.projects-wrap .inner').width(propertiesCount * 800).css({
-    paddingLeft: (winW - 800) / 2,
-    paddingRight: (winW - 800) / 2
-  });
 
   $.fn.scrollToId = function(element, speed=400, offset=0) {
 

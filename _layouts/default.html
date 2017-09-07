@@ -13,7 +13,7 @@
     <div class="page-content" id="skrollr-body">
       <div id="wrapper">
         <div class="cover-section section">
-          <h1 id="logo">Greenscape Realty</h1>
+          <h1 id="logo"><a href="{{"/" | prepend: site.baseurl}}">Greenscape Realty</a></h1>
           <div class="btn-group">
             <a href="{{"#intro-section" | prepend: site.baseurl}}" class="button button-default" id="learn-more" onclick="$(this).scrollToId('#intro-section', 800, 30); return false">Learn More</a>
             <a href="{{"#contact-section" | prepend: site.baseurl}}" class="button button-default" id="contact" onclick="$(this).scrollToId('#contact-section', 800, 30); return false">Request Callback</a>
@@ -22,10 +22,7 @@
         </div>
 
         {{ content }}
-
-        <div class="section footer-section">
-          <p><strong>Greenscape Realty</strong> is the operated by <strong>Shane Dias</strong>, <strong>Shawn Gomes</strong> and <strong>Shannon Gomes</strong>.</p>
-        </div>
+        
       </div>
     </div>
 
