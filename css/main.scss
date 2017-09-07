@@ -130,8 +130,14 @@ body {
   display: inline-block;
   list-style: none;
   vertical-align: top;
-  img {
-    max-height: 440px;
+  .slides {
+    background: white;
+    text-align: center;
+    img {
+      width: auto;
+      margin: 0 auto;
+      max-height: 440px;
+    }
   }
   .title {
     font-size: 14px;
