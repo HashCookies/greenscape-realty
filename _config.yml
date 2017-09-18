@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Greenscape Realty
 email: sdconstructionsgoa@gmail.com
-description: > "State of the art villas and apartments."
+description: "State of the art villas and apartments."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://greenscaperealty.in"
 # Build settings
